@@ -12,6 +12,9 @@ const [todos, setTodos] = useState([])
     setTodos(newTodos)
     setInputValue('')
   }
+  const handleDeleente = (index) => {
+    
+  }
 
   return (
     <div>git push -u origin main
@@ -27,11 +30,14 @@ const [todos, setTodos] = useState([])
       <button onClick={handleAdd}>Agregar</button>
 
       <ul>
-        <li>Item 1 <button>Eliminar</button></li>
-        <li>Item 2 <button>Eliminar</button></li>
-        <li>Item 3 <button>Eliminar</button></li>
+        {todos.map((todo, index) => (
+            <ToDoItem 
+            todo = {}
+            handleDelete = {() =>deleteItem(index)}
+            />
+        ))}
       </ul>
     </div>
-  )
+  )s
 }
 export default ToDoList
